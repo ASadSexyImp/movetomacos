@@ -11,6 +11,7 @@ cask "google-chrome"
 cask "karabiner-elements"           # Keyboard customizer
 cask "logi-options+"                # Mouse config
 cask "raycast"                      # launcher and clipboard
+cask "chatgpt"                      # chatGPT
 
 
 ## apps for code
