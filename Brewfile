@@ -21,7 +21,7 @@ cask "visual-studio-code"           # Text editor
 cask "utm"                          # virtual machine
 cask "wireshark"                    # network monitoring
 cask "raspberry-pi-imager"          # raspberry pi sd card
-
+cask "ollama"                       # llm framework
 
 
 ## other creative apps
