@@ -7,7 +7,7 @@
 `echo 'eval "$(/opt/homebrew/bin/brew shellenv zsh)"' >> /Users/mew/.zprofile`<br>
 `eval "$(/opt/homebrew/bin/brew shellenv zsh)"`<br>
 
-#3 <br>
+#3 brew反映<br>
 `brew bundle dump`<br>
 Brewfile をUser/Spidey/brewfileにコピペ<br>
 `brew bundle`<br>
@@ -22,11 +22,11 @@ Desktop→Hot Corners→Bottom Left→Lock Screen<br>
 Display→Preset→Apple XDR Display(P3 + Adobe RGB)<br>
 Internet Account→add old account<br>
 Keyboard→Key repeat rate/Delay until repeat→Fastest<br>
-Keyboard→Text Input→Edit→Correct spelling automatically→off
-Trackpad→Tracking Speed→Fast
+Keyboard→Text Input→Edit→Correct spelling automatically→off<br>
+Trackpad→Tracking Speed→Fast<br>
 
 
-#5 screenshot save
-`mkdir -p ~/Documents/screenshot
-defaults write com.apple.screencapture location ~/Documents/screenshot
-killall SystemUIServer`
+#5 screenshot save<br>
+`mkdir -p ~/Documents/screenshot`<br>
+`defaults write com.apple.screencapture location ~/Documents/screenshot`<br>
+`killall SystemUIServer`<br>
