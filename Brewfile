@@ -27,7 +27,7 @@ cask "ollama"                       # llm framework
 cask "antigravity"                  # google editor
 cask "claude"                       # claude
 cask "lm-studio"                    # lm studio
-
+cask "lm-studio-bionic"             # lm studio agent
 
 
 ## other creative apps
