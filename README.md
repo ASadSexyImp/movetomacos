@@ -12,26 +12,21 @@
 Brewfile をUser/Spidey/brewfileにコピペ<br>
 `brew bundle`<br>
 
-#4 
-
-
-
-#5 Setting<br>
+#4 Setting<br>
+Network→Firewall→on<br>
 Battery→Charging→optimize Charging up to 80%<br>
 Appearance→Dark<br>
 Desktop→Dock Left→remove all app from Dock<br>
 Desktop→Dock & Stage Manger→Show items→on Desktop→off<br>
 Desktop→Hot Corners→Bottom Left→Lock Screen<br>
 Display→Preset→Apple XDR Display(P3 + Adobe RGB)<br>
-
-
-
-
-
-Keyboard→Key repeat rate/Delay until repeat→Fastest
+Internet Account→add old account<br>
+Keyboard→Key repeat rate/Delay until repeat→Fastest<br>
 Keyboard→Text Input→Edit→Correct spelling automatically→off
 Trackpad→Tracking Speed→Fast
 
 
-#6 screenshot save
-command shift 5
+#5 screenshot save
+`mkdir -p ~/Documents/screenshot
+defaults write com.apple.screencapture location ~/Documents/screenshot
+killall SystemUIServer`
