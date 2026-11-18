@@ -14,6 +14,7 @@ cask "chatgpt"                      # chatGPT
 cask "slack"                        # slack
 cask "discord"                      # discord
 cask "sf-symbols"                   # Apple design resource
+cask ark0n/tap/logolight            # Back logo glow
 
 
 ## apps for code
