@@ -9,9 +9,11 @@ brew "mas"
 ## Utility apps
 cask "google-chrome"
 cask "karabiner-elements"           # Keyboard customizer
-cask "logi-options+"                # Mouse config
 cask "raycast"                      # launcher and clipboard
 cask "chatgpt"                      # chatGPT
+cask "slack"                        # slack
+cask "discord"                      # discord
+cask "sf-symbols"                   # Apple design resource
 
 
 ## apps for code
@@ -22,6 +24,10 @@ cask "utm"                          # virtual machine
 cask "wireshark"                    # network monitoring
 cask "raspberry-pi-imager"          # raspberry pi sd card
 cask "ollama"                       # llm framework
+cask "antigravity"                  # google editor
+cask "claude"                       # claude
+cask "lm-studio"                    # lm studio
+
 
 
 ## other creative apps
@@ -29,6 +35,7 @@ cask "touchdesigner"                # creative coding / VJ
 cask "blender"                      # 3d modeling animation
 cask "epic-games"                   # unreal engine
 cask "openframeworks"               # openframeworks
+cask "affinity"                     # Affinity
 
 
 # Mac app store
