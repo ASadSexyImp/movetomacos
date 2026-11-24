@@ -26,50 +26,65 @@ eval "$(/opt/homebrew/bin/brew shellenv zsh)"
 
 echo "=== 3. Brewfile 作成 & 一括インストール ==="
 cat > "$BREWFILE" <<'EOF'
-# Mac App Store CLI
-brew "mas"
+# ==================================================
+# Brewfile (カテゴリ別)  ※ "# " で始まる行は未インストール候補
+# ==================================================
 
-# Utility apps
-cask "google-chrome"
-cask "karabiner-elements"           # Keyboard customizer
-cask "raycast"                      # launcher and clipboard
-cask "chatgpt"
-cask "slack"
-cask "discord"
-cask "sf-symbols"                   # Apple design resource
-cask "ark0n/tap/logolight"          # Back logo glow
+# ---------- 0. 基盤 ----------
+brew "mas"                          # Mac App Store CLI
 
-# Fonts (Apple SF系)
+# ---------- 1. AI: チャット / アシスタント ----------
+cask "chatgpt"                      # ChatGPT
+cask "claude"                       # Claude
+cask "google-gemini"                # Gemini (Option+Space が Raycast と競合)
+
+# ---------- 2. AI: ローカルLLM ----------
+cask "ollama-app"                   # Ollama (旧 cask "ollama")
+cask "lm-studio"                    # LM Studio
+cask "lm-studio-bionic"             # LM Studio agent (エラーなら削除)
+
+# ---------- 3. AI: コーディング ----------
+cask "antigravity"                  # Google Antigravity
+# cask "claude-code"                # Claude Code (CLI)
+# brew "gemini-cli"                 # Gemini CLI
+
+# ---------- 4. 開発ツール ----------
+cask "visual-studio-code"           # エディタ
+cask "iterm2"                       # ターミナル
+cask "docker"                       # 仮想開発環境
+cask "utm"                          # 仮想マシン
+cask "wireshark"                    # ネットワーク解析
+cask "raspberry-pi-imager"          # Raspberry Pi SDカード書き込み
+mas "Xcode", id: 497799835          # Apple開発ツール
+
+# ---------- 5. クリエイティブ: 3D / ジェネラティブ / ゲーム ----------
+cask "touchdesigner"                # ビジュアルプログラミング / VJ
+cask "openframeworks"               # C++ クリエイティブコーディング
+cask "blender"                      # 3Dモデリング / アニメ
+cask "epic-games"                   # Unreal Engine ランチャー
+# DaVinci Resolve / Houdini は手動インストール
+
+# ---------- 6. クリエイティブ: デザイン / 音楽 ----------
+cask "affinity"                     # Affinity
+mas "Logic Pro", id: 634148309      # 音楽制作
+
+# ---------- 7. フォント / デザインリソース ----------
+cask "sf-symbols"                   # Apple SFシンボル
 cask "font-sf-pro"
 cask "font-sf-mono"
 cask "font-sf-compact"
 
-# Apps for code
-cask "docker"
-cask "iterm2"
-cask "visual-studio-code"
-cask "utm"
-cask "wireshark"
-cask "raspberry-pi-imager"
-cask "ollama"
-cask "antigravity"
-cask "claude"
-cask "lm-studio"
-cask "lm-studio-bionic"
+# ---------- 8. 生産性 / コミュニケーション ----------
+cask "google-chrome"
+cask "raycast"                      # ランチャー + クリップボード履歴
+cask "karabiner-elements"           # キーボードカスタマイズ
+mas "Yoink", id: 457622435          # ドラッグ&ドロップの一時置き場
+cask "slack"
+cask "discord"
 
-# Creative apps
-cask "touchdesigner"
-cask "blender"
-cask "epic-games"
-cask "openframeworks"
-cask "affinity"
+# ---------- 9. ビジュアル系ユーティリティ ----------
+cask "ark0n/tap/logolight"          # 背面ロゴ発光
 
-# Mac App Store (App Storeにサインイン済みであること)
-mas "Xcode", id: 497799835
-mas "Yoink", id: 457622435
-mas "Logic Pro", id: 634148309
-
-# DaVinci Resolve と Houdini は手動インストール
 EOF
 # 一部失敗しても残りを続行する
 brew bundle --file="$BREWFILE" || echo "!! 一部のインストールに失敗しました。上のログを確認してください"
