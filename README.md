@@ -1,3 +1,5 @@
+`bash mac-setup.sh`<br>
+
 #1 command line tool<br>
 `xcode-select --install`<br>
 
